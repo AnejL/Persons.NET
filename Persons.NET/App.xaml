@@ -1,0 +1,9 @@
+﻿<Application x:Class="Persons.NET.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:Persons.NET.ViewModels"
+             xmlns:views="clr-namespace:Persons.NET.Views">
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>
