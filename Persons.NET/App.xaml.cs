@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Persons.NET.Configuration;
 using Persons.NET.Services;
+using Persons.NET.Stores;
 using Persons.NET.ViewModels;
 using Persons.NET.Views;
 using System;

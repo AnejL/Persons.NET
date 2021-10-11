@@ -6,8 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persons.NET.Services
+namespace Persons.NET.Stores
 {
+    /// <summary>
+    /// Keeps reference for main window View Model 
+    /// </summary>
     public class NavigationStore
     {
         public NavigationStore()

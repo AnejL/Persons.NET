@@ -35,16 +35,10 @@ namespace Persons.NET.Services
 
         public async Task WriteToFile(string fileName, object value)
         {
-            try
+            FileStream stream = new FileStream(fileName, File.Exists(fileName) ? FileMode.Truncate : FileMode.CreateNew);
+            using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
             {
-                FileStream stream = new FileStream(fileName, FileMode.Truncate);
-                using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
-                {
-                    writer.Write(JsonSerializer.Serialize(value));
-                }
-            }
-            catch (Exception ex)
-            {
+                writer.Write(JsonSerializer.Serialize(value));
             }
         }
 

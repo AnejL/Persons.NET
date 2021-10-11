@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Microsoft.Extensions.DependencyInjection;
+using Persons.NET.Stores;
 
 namespace Persons.NET.ViewModels
 {

@@ -665,25 +665,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\anejl\\.nuget\\packages\\": {},
+    "C:\\Users\\anej.lekse\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anejl\\source\\repos\\Persons.NET\\Persons.NET\\Persons.NET.csproj",
+      "projectUniqueName": "C:\\Users\\anej.lekse\\source\\repos\\Persons.NET\\Persons.NET\\Persons.NET.csproj",
       "projectName": "Persons.NET",
-      "projectPath": "C:\\Users\\anejl\\source\\repos\\Persons.NET\\Persons.NET\\Persons.NET.csproj",
-      "packagesPath": "C:\\Users\\anejl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anejl\\source\\repos\\Persons.NET\\Persons.NET\\obj\\",
+      "projectPath": "C:\\Users\\anej.lekse\\source\\repos\\Persons.NET\\Persons.NET\\Persons.NET.csproj",
+      "packagesPath": "C:\\Users\\anej.lekse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\anej.lekse\\source\\repos\\Persons.NET\\Persons.NET\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\anejl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\anej.lekse\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -747,6 +747,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.19, 3.1.19]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -755,7 +761,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

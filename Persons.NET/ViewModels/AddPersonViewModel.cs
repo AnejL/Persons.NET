@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
+using Persons.NET.Stores;
 
 namespace Persons.NET.ViewModels
 {
@@ -29,10 +29,12 @@ namespace Persons.NET.ViewModels
             var person = await this.personsService.AddPerson(this.FirstName, this.LastName, this.TaxNumber, this.Address);
             if (person == null)
             {
-                this.logger.LogError("Person was not logged!");
+                this.Status = "Person was not inserted. Is your Tax Number unique?";
             }
-            
-            this.NavigateHome();
+            else
+            {
+                this.NavigateHome();
+            }
         }
     }
 }
