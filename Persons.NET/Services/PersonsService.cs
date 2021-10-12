@@ -29,11 +29,24 @@ namespace Persons.NET.Services
             this.appSettings = appSettings.Value;
         }
 
-        public async Task<bool> ValidateTaxNumber(long taxNumber)
+        public async Task<bool> ValidateTaxNumber(long taxNumber, string id = null)
         {
-            return taxNumber > 0 
-                && taxNumber.ToString().Length == 8 
-                && !(await this.GetPersons()).Select(p => p.TaxNumber).Contains(taxNumber);
+            var formatCorrect = taxNumber > 0
+                && taxNumber.ToString().Length == 8;
+
+            var unique = false;
+            var persons = await this.GetPersons();
+
+            if (string.IsNullOrEmpty(id))
+            {
+                unique = !persons.Select(p => p.TaxNumber).Contains(taxNumber);
+            }
+            else
+            {
+                unique = !persons.Where(p => p.Id != id).Select(p => p.TaxNumber).Contains(taxNumber);
+            }
+
+            return formatCorrect && unique;
         }
 
         private bool ValidateStrings(string firstName, string lastName, string address)
@@ -103,7 +116,7 @@ namespace Persons.NET.Services
         public async Task<Person> UpdatePerson(string id, string firstName, string lastName, long taxNumber, string address)
         {
             if (!this.ValidateStrings(firstName, lastName, address)
-               || !await this.ValidateTaxNumber(taxNumber))
+               || !await this.ValidateTaxNumber(taxNumber, id))
             {
                 return null;
             }

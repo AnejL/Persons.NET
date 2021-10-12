@@ -13,8 +13,8 @@ namespace Persons.NET.ViewModels
 {
     public class AddPersonViewModel : PersonViewModel
     {
-        public AddPersonViewModel(ILogger<AddPersonViewModel> logger, PersonsService personsService, NavigationStore navigationStore)
-            : base(logger, personsService, navigationStore)
+        public AddPersonViewModel(PersonsService personsService, NavigationStore navigationStore)
+            : base(personsService, navigationStore)
         {
         }
 

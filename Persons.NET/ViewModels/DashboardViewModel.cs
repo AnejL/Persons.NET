@@ -18,13 +18,11 @@ namespace Persons.NET.ViewModels
     public class DashboardViewModel : BaseViewModel
     {
         private readonly PersonsService personsService;
-        private readonly ILogger logger;
         private readonly NavigationStore navigationService;
 
-        public DashboardViewModel(ILogger<DashboardViewModel> logger, PersonsService personsService, NavigationStore navigationService)
+        public DashboardViewModel(PersonsService personsService, NavigationStore navigationService)
         {
             this.personsService = personsService;
-            this.logger = logger;
             this.navigationService = navigationService;
 
             this.AddCommand = new DelegateCommand(AddPerson);

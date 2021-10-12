@@ -26,7 +26,7 @@ namespace Persons.NET.Tests
 
         private string GenerateRandomFileName()
         {
-            return $"{Guid.NewGuid().ToString()}.json";
+            return $"{Guid.NewGuid()}.json";
         }
 
         private async Task<Person> InsertSamplePerson(long taxNumber)

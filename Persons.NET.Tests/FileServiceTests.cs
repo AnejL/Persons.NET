@@ -22,7 +22,7 @@ namespace Persons.NET.Tests
 
         private string GenerateRandomFileName()
         {
-            return $"{Guid.NewGuid().ToString()}.json";
+            return $"{Guid.NewGuid()}.json";
         }
 
         [Test]
@@ -41,7 +41,6 @@ namespace Persons.NET.Tests
             var result = await this.fileService.ReadFromFile<List<Person>>(filename);
             Assert.True(result.First().Id == person1.Id);
         }
-
 
         [Test]
         public async Task ReadMultiplePersonsFromFile()

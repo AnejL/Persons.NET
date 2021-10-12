@@ -15,13 +15,11 @@ namespace Persons.NET.ViewModels
     {
         protected readonly PersonsService personsService;
         protected readonly NavigationStore navigationStore;
-        protected readonly ILogger logger;
 
-        public PersonViewModel(ILogger<PersonViewModel> logger, PersonsService personsService, NavigationStore navigationStore)
+        public PersonViewModel(PersonsService personsService, NavigationStore navigationStore)
         {
             this.personsService = personsService;
             this.navigationStore = navigationStore;
-            this.logger = logger;
 
             this.SaveCommand = new DelegateCommand(async () => await this.Save());
             this.BackCommand = new DelegateCommand(NavigateHome);

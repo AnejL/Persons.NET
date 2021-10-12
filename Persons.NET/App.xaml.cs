@@ -45,8 +45,6 @@ namespace Persons.NET
             services.Configure<AppSettings>
                 (Configuration.GetSection(nameof(AppSettings)));
 
-            services.AddLogging(configure => configure.AddConsole());
-
             // inject Services
             services.AddSingleton<FileService>();
             services.AddSingleton<PersonsService>();

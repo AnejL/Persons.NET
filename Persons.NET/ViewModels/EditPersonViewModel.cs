@@ -11,8 +11,8 @@ namespace Persons.NET.ViewModels
 {
     public class EditPersonViewModel : PersonViewModel
     {
-        public EditPersonViewModel(ILogger<EditPersonViewModel> logger, PersonsService personsService, NavigationStore navigationStore)
-            : base(logger, personsService, navigationStore)
+        public EditPersonViewModel(PersonsService personsService, NavigationStore navigationStore)
+            : base(personsService, navigationStore)
         {
         }
 
@@ -40,12 +40,15 @@ namespace Persons.NET.ViewModels
             }
 
             var person = await this.personsService.UpdatePerson(this.Id, this.FirstName, this.LastName, this.TaxNumber, this.Address);
-            if (person == null)
-            {
-                this.logger.LogError("Person was not updated!");
-            }
 
-            this.NavigateHome();
+            if (person != null)
+            {
+                this.NavigateHome();
+            }
+            else
+            {
+                this.Status = "Person was not updated. Is Tax number unique?";
+            }    
         }
 
         #region Bindings
