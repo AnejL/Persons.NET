@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Logging;
 using NUnit.Framework;
 using Persons.NET.Model;
 using Persons.NET.Services;

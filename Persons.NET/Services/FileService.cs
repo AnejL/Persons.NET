@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Persons.NET.Configuration;
+﻿using Persons.NET.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;

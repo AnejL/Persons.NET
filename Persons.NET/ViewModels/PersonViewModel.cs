@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Persons.NET.Helpers;
+﻿using Persons.NET.Helpers;
 using Persons.NET.Services;
 using System;
 using System.Collections.Generic;
